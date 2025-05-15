@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FiStar, FiGitBranch, FiEye, FiFilter, FiX, FiChevronDown, FiUser, FiClock } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import { FaSearch } from 'react-icons/fa';
 
 
 const SearchResult = ({ searchQuery = '' }) => {
@@ -35,6 +36,7 @@ const SearchResult = ({ searchQuery = '' }) => {
     // Busca inicial com valores padrão
     useEffect(() => {
         if (searchQuery) {
+            localStorage.setItem("query", searchQuery)
             fetchRepos(searchQuery);
         }
     }, [searchQuery]);
@@ -90,6 +92,13 @@ const SearchResult = ({ searchQuery = '' }) => {
 
     const findRepos = (event) => {
         const value = event.target.value;
+        localStorage.setItem('query', value);
+        fetchRepos(value)
+    }
+
+    const findReposByClick = (event) => {
+        const value = event.target.parentNode.children[0].value;
+        localStorage.setItem('query', value);
         fetchRepos(value)
     }
 
@@ -216,19 +225,20 @@ const SearchResult = ({ searchQuery = '' }) => {
                 {/* Área de Resultados */}
                 <div className="md:w-3/4">
                     {/* Barra de pesquisa */}
-                    <div className="flex items-center bg-white rounded-lg mb-5 hover:shadow-amber-300 shadow-sm border border-gray-200 overflow-hidden">
+                    <div className="flex items-center pr-6 bg-white rounded-lg mb-5 hover:shadow-amber-300 shadow-sm border border-gray-200 overflow-hidden">
                         <input
                             type="text"
-                            defaultValue={searchQuery}
-                            onChange={findRepos}
+                            defaultValue={localStorage.getItem('query')}
+                            onBlur={findRepos}
                             placeholder="Pesquise pelo termo...  (ex. dompdf)"
                             className="flex-1 px-5 sm:px-10 py-4 sm:py-5 focus:outline-none"
                         />
-                        <button className="px-8 py-5 text-amber-500 opacity-70 transition-colors">
+                        <FaSearch onClick={findReposByClick} className="cursor-pointer text-amber-500 opacity-70 transition-colors" />
+                        {/* <button onClick={findReposByClick} className="px-8 py-5 text-amber-500 opacity-70 transition-colors">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                        </button>
+                        </button> */}
                     </div>
                     {/* Status da Busca */}
                     {loading && (
