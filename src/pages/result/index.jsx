@@ -7,7 +7,7 @@ export function Result() {
     return (
         <main>
             {/* <Header /> */}
-            <SearchResult searchQuery="giteer" />
+            <SearchResult searchQuery={localStorage.getItem("query")} />
             {/* <Results searchQuery="react" /> */}
         </main>
     );
