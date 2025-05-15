@@ -13,7 +13,8 @@ A ideia e poder fazer buscar e filtros por repositorios do GitHub, GitLab e mais
 
 - **✅ Pesquisas**  
 - **🚀 Filtros**  
-- **🔒 Memoria**  
+- **🔒 Memoria**
+- **README como pagina de visualizacao do reopsitotio**
 
 ## 🛠️ Tecnologias Utilizadas  
 
