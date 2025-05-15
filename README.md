@@ -1,12 +1,38 @@
-# React + Vite
+# Giteer  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Desenvolvimento-yellow)  
+[![Licença](https://img.shields.io/badge/Licença-MIT-blue)](LICENSE)  
 
-Currently, two official plugins are available:
+**Descrição breve**: Giteer te permite fazer buscas por repositórios do Github com se estive fazendo buscas por websites na Google. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Visão Geral  
 
-## Expanding the ESLint configuration
+A ideia e porder fazer buscar e filtros por repositorios do GitHub, GitLab e mais em uma so platforma e, ter acesso apenas ao arquivo README do repositorio. Basicamente o respositorio vira o website.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades Principais  
+
+- **✅ Pesquisas**  
+- **🚀 Filtros**  
+- **🔒 Memoria**  
+
+## 🛠️ Tecnologias Utilizadas  
+
+| Categoria       | Ferramentas                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| **Linguagens**  | [JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) |
+| **Frameworks**  | [React](https://img.shields.io/badge/React-20232A?logo=react)  |
+| **Banco de Dados** |[PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql) |
+| **Ferramentas** | [Git](https://img.shields.io/badge/Git-F05032?logo=git) |
+
+## 🚀 Como Executar o Projeto  
+
+### 📋 Pré-requisitos  
+- [Node.js 20+](https://nodejs.org/)  
+
+### ⚙️ Instalação  
+1. Clone o repositório:  
+   ```bash
+   git clone https://github.com/OscarNdodo/giteer.git
+   cd giteer
+   npm i
+   npm run dev
