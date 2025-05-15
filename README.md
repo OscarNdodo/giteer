@@ -7,7 +7,7 @@
 
 ## 📌 Visão Geral  
 
-A ideia e porder fazer buscar e filtros por repositorios do GitHub, GitLab e mais em uma so platforma e, ter acesso apenas ao arquivo README do repositorio. Basicamente o respositorio vira o website.
+A ideia e poder fazer buscar e filtros por repositorios do GitHub, GitLab e mais em uma so platforma e, ter acesso apenas ao arquivo README do repositorio. Basicamente o respositorio servira como o website do Projecto/Repositorio.
 
 ## ✨ Funcionalidades Principais  
 

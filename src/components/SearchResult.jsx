@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FiStar, FiGitBranch, FiEye, FiFilter, FiX, FiChevronDown, FiUser, FiClock } from 'react-icons/fi';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 
 const SearchResult = ({ searchQuery = '' }) => {
@@ -276,9 +277,7 @@ const SearchResult = ({ searchQuery = '' }) => {
                             {repos.map((repo) => (
                                 <div key={repo.id} className="bg-white p-6 rounded-lg  border border-gray-200 hover:shadow-md transition">
                                     <div className=" flex justify-between">
-                                        <a
-                                            href={repo.html_url}
-                                            target="_blank"
+                                        <Link to={`/${repo.owner.login}/${repo.name}/readme`}
                                             rel="noopener noreferrer"
                                             className="flex text-lg font-semibold text-amber-600 hover:underline"
                                         >
@@ -295,7 +294,7 @@ const SearchResult = ({ searchQuery = '' }) => {
                                                     {/* {repo.license.key} */}
                                                 </small>
                                             </div>
-                                        </a>
+                                        </Link>
                                         <span className={`text-xs px-3 py-1 h-6 rounded-full ${repo.private ? 'bg-purple-100 text-purple-800' : 'bg-green-100 text-green-800'
                                             }`}>
                                             {repo.private ? 'Privado' : 'Público'}
@@ -335,6 +334,8 @@ const SearchResult = ({ searchQuery = '' }) => {
                     )}
                 </div>
             </main>
+
+            <Footer />
         </div>
     );
 };

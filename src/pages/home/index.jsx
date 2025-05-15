@@ -10,7 +10,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   function goResult() {
-    return navigate("/result")
+    return navigate("/explore")
   }
 
 
