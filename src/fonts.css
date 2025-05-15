@@ -1,0 +1,38 @@
+@font-face {
+    font-family: mulish-black;
+    src: url("src/fonts/Mulish-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-bold;
+    src: url("src/fonts/Mulish-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-extra-bold;
+    src: url("src/fonts/Mulish-ExtraBold.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-extra-light;
+    src: url("src/fonts/Mulish-ExtraLight.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-light;
+    src: url("src/fonts/Mulish-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-medium;
+    src: url("src/fonts/Mulish-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: mulish-regular;
+    src: url("src/fonts/Mulish-Regular.ttf");
+  }
+  
+  * {
+    font-family: mulish-regular;
+  }
