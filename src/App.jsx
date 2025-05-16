@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/next"
 
 import Home from "./pages/home";
 import { Result } from "./pages/result";
@@ -9,6 +10,7 @@ import Repository from "./pages/repository";
 export default function App() {
   return (
     <Router>
+      <Analytics /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Result />} />
